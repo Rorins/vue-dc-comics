@@ -2,14 +2,17 @@
   <!--Second section-->
   <section >
       <div class="container">
-      <h3>-->Content here</h3>
+      <ul>
+          <li v-for="(link,index) in navLink" :key="`linkNav-${index}`">
+              <a :href="link.url"><img :src="`../assets/buy-comics-${link.src}.png`" alt="">{{link.text}}</a>
+          </li></ul>
       </div>
   </section>
 </template>
 
 <script>
 export default {
-name:'sectionOne',
+name:'sectionTwo',
 data(){
     return{
         navLink:[
@@ -52,10 +55,18 @@ data(){
 
 <style scoped lang="scss">
 section{
-    background-color:black;
+    background-color:#0282f9;
     padding:40px 0;
 }
-   h3{
+ul{
+    display:flex;
+    list-style-type:none;
+}
+   li{
+       padding:10px;
+   }
+   a{
        color:white;
+       text-decoration:none;
    }
 </style>

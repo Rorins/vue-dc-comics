@@ -1,18 +1,22 @@
 <template>
   <footer>
-      <section><ul>
-          <li v-for="(link,index) in navLink" :key="`linkNav-${index}`">
-              <a :href="link.url">{{link.text}}</a>
-          </li></ul>
+      <!--First section-->
+      <section class="first-section">
+          <div class="container">
+          <ul><li v-for="(link,index) in navLink" :key="`linkNav-${index}`">
+              <a :href="link.url">{{link.text}}</a></li></ul>
+          </div>
           </section>
 
-      <section><ul>
-          <li v-for="(link,index) in links" :key="`link-${index}`">
-              <a :href="link.url">{{link.text}}</a> 
-          </li>
-          </ul></section>
+      <!--Second section-->
+      <section class="second-section">
+          <div class="container">
+          <button class="sign-up">SIGN-UP NOW!</button>
+          <div class="social"><h3>FOLLOW US</h3>
+          <img src="../assets/footer-facebook.png" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></div>
+          </div>
+          </section>
 
-      <section><button>SIGN-UP NOW!</button></section>
   </footer>
 </template>
 
@@ -88,6 +92,27 @@ data() {
 }
 </script>
 
-<style>
-
+<style scoped lang="scss">
+.first-section{
+    background-image: url(../assets/footer-bg.jpg);
+    padding:40px 0;
+}
+    ul {list-style-type: none;}
+       a{
+           color:white;
+           text-decoration: none;
+       }
+.second-section{
+    padding:40px 0;
+    background-color: #303030;
+}
+    div{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+    .social > h3{
+        color:#037df0;
+        margin-right: 10px;
+    }
 </style>

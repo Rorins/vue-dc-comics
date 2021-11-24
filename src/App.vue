@@ -6,6 +6,7 @@
     <!--MAIN-->
     <main>
       <sectionOne />
+      <sectionTwo />
     </main>
 
     <!--FOOTER-->
@@ -16,6 +17,7 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import sectionTwo from '@/components/sectionTwo.vue'
 import sectionOne from '@/components/sectionOne.vue'
 
 export default {
@@ -24,6 +26,7 @@ export default {
   Header,
   Footer,
   sectionOne,
+  sectionTwo,
   }
 }
 </script>
@@ -40,4 +43,11 @@ export default {
   max-width: 1170px;
   margin:0 auto;
 }
+.sign-up{
+  background-color:#303030;
+  border: 1px solid #0282f9;
+  padding:10px;
+  color:white;
+}
+
 </style>

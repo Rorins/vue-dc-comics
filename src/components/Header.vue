@@ -76,6 +76,9 @@ data() {
 </script>
 
 <style scoped lang="scss">
+header{
+    padding:20px 0;
+}
 nav {
     display:flex;
     justify-content: space-between};
