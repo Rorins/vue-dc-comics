@@ -1,13 +1,12 @@
 <template>
   <!--Header-->
-    <header>
+    <header class="container">
       <nav>
+          <img src="../assets/dc-logo.png" alt="">
         <ul>
           <li v-for="(link,index) in navLink" :key="`link-${index}`">
               <a :href="link.url">{{link.text}}</a>
           </li>
-
-          
         </ul>
       </nav>
     </header>
@@ -76,6 +75,23 @@ data() {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+nav {
+    display:flex;
+    justify-content: space-between};
+    ul{
+        display:flex;
+        align-items: center;
+        list-style-type:none;
+    }
+    a{
+        text-decoration: none;
+        padding: 0 10px;
+        color:black;
+        &:hover{
+            color:#037ae9;
+        }
+    }
+    
 
 </style>

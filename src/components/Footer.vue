@@ -8,11 +8,7 @@
 
       <section><ul>
           <li v-for="(link,index) in links" :key="`link-${index}`">
-              <a :href="link.url">{{link.text}}</a>
-              <li v-for="(link in links.subtitles ,index)" :key="`subLinks-${index}`">
-                  <a href="">{{link}}</a>
-              </li>
-              
+              <a :href="link.url">{{link.text}}</a> 
           </li>
           </ul></section>
 
@@ -32,22 +28,17 @@ data() {
                 current:true,
             },
             {
-                text:"DC MERCHANDISE",
+                text:"DC",
                 url:"/",
                 current:true,
             },
             {
-                text:"SUBSCRIPTION",
+                text:"SITES",
                 url:"/",
                 current:true,
             },
             {
-                text:"COMIC SHOP LOCATOR",
-                url:"/",
-                current:true,
-            },
-            {
-                text:"DC POWER VISA",
+                text:"SHOP",
                 url:"/",
                 current:true,
             },
