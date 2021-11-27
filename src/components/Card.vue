@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <img :src="image" :alt="title" />
     <h3>{{title}}</h3>     
   </div>
@@ -19,7 +19,12 @@ props:{
 
 <style scoped lang="scss">
 div{
-  text-align:center;
+  width: 190px;
+  padding:5px;
+}
+img{
+  width: 100%;
+  object-fit: cover;
 }
 h3{
     color:white;
