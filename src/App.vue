@@ -32,22 +32,6 @@ export default {
 </script>
 
 <style lang="scss">
-*{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-}
-
-//UTILITIES
-.container{
-  max-width: 1170px;
-  margin:0 auto;
-}
-.sign-up{
-  background-color:#303030;
-  border: 1px solid #0282f9;
-  padding:10px;
-  color:white;
-}
-
+@import '@/styles/default';
+@import '@/styles/utilities';
 </style>

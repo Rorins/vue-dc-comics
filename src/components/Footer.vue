@@ -12,9 +12,17 @@
       <section class="second-section">
           <div class="container">
           <button class="sign-up">SIGN-UP NOW!</button>
+
           <div class="social"><h3>FOLLOW US</h3>
-          <img src="../assets/footer-facebook.png" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></div>
+          <ul>
+          <li v-for="(icon,index) in social" :key="`socialIcon-${index}`">
+              <img :src="require(`@/assets/footer-${icon.src}.png`)" alt="">
+          </li>
+          </ul>
           </div>
+
+          </div>
+
           </section>
 
   </footer>
@@ -48,42 +56,21 @@ data() {
             },
             
         ],
-          links:[
+        social:[
             {
-                text:"DC COMICS",
-                url:"/",
-                current:true,
-                maintitle:true,
-                subtitles:[
-                    "Character","Comics","Movies"
-                ]
+                src:'facebook',
             },
             {
-                text:"DC",
-                url:"/",
-                current:true,
-                maintitle:true,
-                subtitles:[
-                    "Character","Comics","Movies"
-                ]
+                src:'periscope',
             },
             {
-                text:"SITES",
-                url:"/",
-                current:true,
-                maintitle:true,
-                subtitles:[
-                    "Character","Comics","Movies"
-                ]
+               src:'pinterest',
             },
             {
-                text:"SHOP",
-                url:"/",
-                current:true,
-                maintitle:true,
-                subtitles:[
-                    "Character","Comics","Movies"
-                ]
+                src:'twitter',
+            },
+            {
+                src:'youtube',
             },
             
         ]
@@ -111,6 +98,12 @@ data() {
         justify-content: space-between;
         align-items: center;
         }
+    ul{
+        display:flex;
+    }
+    li{
+        padding:5px;
+    }
     .social > h3{
         color:#037df0;
         margin-right: 10px;

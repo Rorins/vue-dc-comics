@@ -4,7 +4,7 @@
       <div class="container">
       <ul>
           <li v-for="(link,index) in navLink" :key="`linkNav-${index}`">
-              <a :href="link.url"><img :src="`../assets/buy-comics-${link.src}.png`" alt="">{{link.text}}</a>
+              <a :href="link.url"><img :src="require(`@/assets/buy-comics-${link.src}.png`)" alt="">{{link.text}}</a>
           </li></ul>
       </div>
   </section>
@@ -32,13 +32,13 @@ data(){
                 text:"SUBSCRIPTION",
                 url:"/",
                 current:true,
-                src:"shop-locator",
+                src:"subscriptions",
             },
             {
                 text:"COMIC SHOP LOCATOR",
                 url:"/",
                 current:true,
-                src:"subscriptions",
+                src:"shop-locator",
             },
             {
                 text:"DC POWER VISA",
@@ -68,5 +68,8 @@ ul{
    a{
        color:white;
        text-decoration:none;
+   }
+   img{
+       width:80px;
    }
 </style>
