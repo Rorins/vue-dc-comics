@@ -3,6 +3,9 @@
     <!--HEADER-->
     <Header />
 
+    <!--HERO-->
+    <Hero />
+
     <!--MAIN-->
     <main>
       <sectionOne />
@@ -19,6 +22,7 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import sectionTwo from '@/components/sectionTwo.vue'
 import sectionOne from '@/components/sectionOne.vue'
+import Hero from '@/components/Hero.vue'
 
 export default {
   name: 'App',
@@ -27,6 +31,7 @@ export default {
   Footer,
   sectionOne,
   sectionTwo,
+  Hero,
   }
 }
 </script>
